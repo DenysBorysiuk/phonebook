@@ -19,9 +19,9 @@ import {
 } from 'react-icons/bs';
 import { EditForm } from 'components/EditForm/EditForm';
 
-export const ContactListItem = ({ id, name, number }) => {
+export const ContactListItem = ({ _id, name, number }) => {
   const dispatch = useDispatch();
-  const handleDelete = () => dispatch(deleteContact(id));
+  const handleDelete = () => dispatch(deleteContact(_id));
   const [showModal, setShowModal] = useState(false);
 
   const toggleModal = () => setShowModal(prevState => !prevState);
@@ -49,7 +49,12 @@ export const ContactListItem = ({ id, name, number }) => {
       </Item>
       {showModal && (
         <Modal onClose={toggleModal}>
-          <EditForm onClose={toggleModal} id={id} name={name} number={number} />
+          <EditForm
+            onClose={toggleModal}
+            _id={_id}
+            name={name}
+            number={number}
+          />
         </Modal>
       )}
     </>
@@ -57,7 +62,7 @@ export const ContactListItem = ({ id, name, number }) => {
 };
 
 ContactListItem.propTypes = {
-  id: PropTypes.string.isRequired,
+  _id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
 };

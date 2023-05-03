@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
+axios.defaults.baseURL = 'https://api-phonebook.onrender.com/api';
 
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
@@ -41,9 +41,9 @@ export const deleteContact = createAsyncThunk(
 
 export const updateContact = createAsyncThunk(
   'contacts/updateContact',
-  async ({ id, name, number }, thunkAPI) => {
+  async ({ _id, name, number }, thunkAPI) => {
     try {
-      const response = await axios.patch(`/contacts/${id}`, {
+      const response = await axios.put(`/contacts/${_id}`, {
         name,
         number,
       });

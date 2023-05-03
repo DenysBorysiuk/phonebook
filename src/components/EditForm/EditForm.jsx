@@ -29,7 +29,7 @@ const schema = yup
   })
   .required();
 
-export const EditForm = ({ id, name, number, onClose }) => {
+export const EditForm = ({ _id, name, number, onClose }) => {
   const dispatch = useDispatch();
 
   const {
@@ -48,7 +48,7 @@ export const EditForm = ({ id, name, number, onClose }) => {
     if (name === data.name && number === data.number) {
       return toast.error(`contact not changed`);
     }
-    dispatch(updateContact({ id, ...data }));
+    dispatch(updateContact({ _id, ...data }));
     onClose();
   };
 
@@ -73,7 +73,7 @@ export const EditForm = ({ id, name, number, onClose }) => {
 };
 
 EditForm.propTypes = {
-  id: PropTypes.string.isRequired,
+  _id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
   onClose: PropTypes.func,
