@@ -1,6 +1,7 @@
 # Phonebook App 💁‍♀️
 
-**[View live page](https://denysborysiuk.github.io/phonebook/)**
+- **[View live page](https://denysborysiuk.github.io/phonebook/)**
+- **[Backend code page](https://github.com/DenysBorysiuk/api-phonebook)**
 ---
 ![Site image](./public/home-page.png)
 
@@ -11,8 +12,6 @@ This project is a Fullstack app that allows you to register a user and create a 
 Frontend built on React.
 Backend is built on Node.js 
 Database MongoDB
-
-**[Backend page](https://github.com/DenysBorysiuk/api-phonebook)**
 
 ## Attention!!!
 
