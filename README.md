@@ -1,7 +1,7 @@
 # Phonebook App 💁‍♀️
 
+**[View live page](https://denysborysiuk.github.io/phonebook/)**
 ---
-
 ![Site image](./public/home-page.png)
 
 ## 🗂️ Project description 🗂️
@@ -9,8 +9,10 @@
 This project is a Fullstack app that allows you to register a user and create a private collection of contacts.
 
 Frontend built on React.
-Backend is built on  Node.js https://github.com/DenysBorysiuk/api-phonebook
+Backend is built on Node.js 
 Database MongoDB
+
+**[Backend page](https://github.com/DenysBorysiuk/api-phonebook)**
 
 ## Attention
 
