@@ -1,8 +1,8 @@
-# Phonebook App
+# Phonebook App 💁‍♀️
 
 ---
 
-![Site image](./public/images/og-image.jpg)
+![Site image](./public/home-page.png)
 
 This project is a Fullstack app that allows you to register a user and create a private collection of contacts.
 
