@@ -4,10 +4,12 @@
 
 ![Site image](./public/home-page.png)
 
+## 🗂️ Project description 🗂️
+
 This project is a Fullstack app that allows you to register a user and create a private collection of contacts.
 
 Frontend built on React.
-Backend is built on  Node.js 
+Backend is built on  Node.js https://github.com/DenysBorysiuk/api-phonebook
 Database MongoDB
 
 ## Attention
@@ -34,3 +36,17 @@ This will cause a delay in the response of the first request after a period of i
 - Redux
 - Styled-component
 - Axios
+
+## 📂 Deployment
+
+To deploy this project, you need to perform the following steps:
+
+1. **Clone the repository**: Use the `git clone` command to clone this repository to your computer.
+2. **Install the dependencies**: Open a terminal in the root of the project and run `npm install` or
+   `yarn install` to install all required dependencies.
+3. **Setting environment variables**: Create a `.env` file in the root folder and add the necessary
+   environment variables that you need for the project according to the `.env.example` file.
+4. **Run the application**: Run the `npm run dev` or `yarn dev` command to run the project on the
+   local server.
+5. **Deploy**: To deploy this project to a production server, use hosting platforms such as Vercel,
+   Netlify, or others.
