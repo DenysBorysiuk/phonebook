@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import toast from 'react-hot-toast';
 
 axios.defaults.baseURL = 'https://api-phonebook.onrender.com/api';
 
@@ -17,8 +18,10 @@ export const registration = createAsyncThunk(
     try {
       const res = await axios.post('/users/register', credentials);
       setAuthHeader(res.data.token);
+      toast.success('Registration success');
       return res.data;
     } catch (error) {
+      toast.error('Something went wrong');
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -30,8 +33,10 @@ export const logIn = createAsyncThunk(
     try {
       const res = await axios.post('/users/login', credentials);
       setAuthHeader(res.data.token);
+      toast.success(`Hello ${res.data.user.email}`);
       return res.data;
     } catch (error) {
+      toast.error('Login or password is incorrect');
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -41,7 +46,9 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
     await axios.post('/users/logout');
     clearAuthHeader();
+    toast.success('Logout success');
   } catch (error) {
+    toast.error('Something went wrong');
     return thunkAPI.rejectWithValue(error.message);
   }
 });
@@ -49,18 +56,19 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
 export const refreshUser = createAsyncThunk(
   'auth/refresh',
   async (_, thunkAPI) => {
-    const state = thunkAPI.getState();
-    const persistedToken = state.auth.token;
+    const { token } = thunkAPI.getState().auth;
 
-    if (persistedToken === null) {
-      return thunkAPI.rejectWithValue('Unable to fetch user');
+    if (!token) {
+      return thunkAPI.rejectWithValue('No valid token');
     }
 
+    setAuthHeader(token);
+
     try {
-      setAuthHeader(persistedToken);
       const res = await axios.get('/users/current');
       return res.data;
     } catch (error) {
+      toast.error(`Something went wrong`);
       return thunkAPI.rejectWithValue(error.message);
     }
   }

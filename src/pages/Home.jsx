@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <div style={styles.container}>
       <Helmet>
-        <title>Home</title>
+        <title>Phonebook | Home</title>
       </Helmet>
       <h1 style={styles.title}>
         Hi! Welcome to Phonebook App{' '}

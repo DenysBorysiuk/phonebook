@@ -14,7 +14,7 @@ const Register = () => {
   return (
     <div style={styles.container}>
       <Helmet>
-        <title>Registration</title>
+        <title>Phonebook | Registration</title>
       </Helmet>
       <RegisterForm />
     </div>

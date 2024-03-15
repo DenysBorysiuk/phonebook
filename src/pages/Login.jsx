@@ -14,7 +14,7 @@ const Login = () => {
   return (
     <div style={styles.container}>
       <Helmet>
-        <title>Login</title>
+        <title>Phonebook | Login</title>
       </Helmet>
       <LoginForm />
     </div>

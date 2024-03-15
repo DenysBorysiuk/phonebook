@@ -31,13 +31,17 @@ const Contacts = () => {
   return (
     <div style={styles.container}>
       <Helmet>
-        <title>Contacts</title>
+        <title>Phonebook | Contacts</title>
       </Helmet>
+
       <Filter />
 
       <ContactsBar onOpen={toggleModal} />
+
       {isLoading && !error && <Loader />}
+
       <ContactList />
+
       {showModal && (
         <Modal onClose={toggleModal}>
           <ContactForm onClose={toggleModal} />

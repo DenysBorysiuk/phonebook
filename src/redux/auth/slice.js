@@ -1,6 +1,5 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 import { registration, logIn, logOut, refreshUser } from './operations';
-import toast from 'react-hot-toast';
 
 const extraActions = [registration, logIn, logOut, refreshUser];
 const getActions = type => extraActions.map(action => action[type]);
@@ -49,7 +48,6 @@ const authSlice = createSlice({
       .addMatcher(isAnyOf(...getActions('rejected')), (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
-        toast.error(`Something went wrong`);
       });
   },
 });
