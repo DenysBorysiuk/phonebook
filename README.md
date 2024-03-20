@@ -38,7 +38,7 @@ This will cause a delay in the response of the first request after a period of i
 - Emotion
 - Axios
 
-## 📂 Deployment
+## ⚙️ Deployment
 
 To deploy this project, you need to perform the following steps:
 
