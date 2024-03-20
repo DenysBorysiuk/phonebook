@@ -1,4 +1,4 @@
-# Phonebook App 💁‍♀️
+# 📞 Phonebook App :phone 
 
 - **[View live page](https://denysborysiuk.github.io/phonebook/)**
 - **[Backend code page](https://github.com/DenysBorysiuk/api-phonebook)**
