@@ -31,7 +31,6 @@ This will cause a delay in the response of the first request after a period of i
 - React
 - React-dom
 - React-router-dom
-- React-select
 - React-spinners
 - React-hot-toast
 - Redux
